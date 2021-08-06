@@ -1,18 +1,70 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
     <title>Jeu de dés</title>
   </head>
   <body>
+    <div class="container text-center mt-5 box">  
+      <button class="btn btn-outline-warning mt-4" id="rejouer"><i class="fas fa-plus-circle"></i> Rejouer</button>
+
+        <div class="row pt-5">
+          <div class="col-4 ombre" id="select1">
+            <h2>Joueur 1</h2>
+            <div class="joueur-score" id="score-1">0</div>                    
+          </div>
+          
+          <div class="col-4">
+            <img src="images/dice-1.png" alt="Dé" class="img-fluid de de2 mt-4 rounded-5 border border-danger" id="de2">
+          </div>
+
+          <div class="col-4 ombre" id="select2">
+            <h2>Joueur 2</h2>
+            <div class="joueur-score" id="score-1">0</div>                
+          </div>
+        </div>
+
+        <div class="row mt-3 ">
+          <div class="col-4">
+            <div class="points-joueurs lead">
+              <p>Points</p>
+              <p class="points fs-1" id="points-1">0</p>
+            </div>  
+          </div>
+
+          <div class="col-4">
+            <div><button class="btn btn-outline-danger" id="roulez-des"><i class="fas fa-sync-alt"></i> Roulez les dés !</button></div>
+            <div><button class="btn btn-outline-info mt-5"><i class="fas fa-file-download"></i> Enregistrer</button></div>   
+          </div>
+
+          <div class="col-4">
+            <div class="points-joueurs lead">
+              <p>Points</p>
+              <p class="points fs-1" id="points-2">0</p>
+            </div>  
+
+          </div>
+
+
+        </div>
+
+      <input type="text" id="scoreFinal" placeholder="Final score" class="text-center lead mt-3">
+
+   </div>
 
 
 
-    
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
