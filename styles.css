@@ -1,0 +1,94 @@
+body {
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+
+
+.box {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 800px;
+
+}
+
+.points{
+  height: 100px;
+}
+
+.points-joueurs{
+  background-color: #fd4857;
+  color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+
+.player-current-score {
+  font-size: 40px;
+}
+.joueur-score {
+  text-align: center;
+  font-size: 80px;
+  color: #EB4D4D;
+  margin-bottom: 130px;
+}
+
+#scoreFinal{
+  width: 180px;
+}
+
+.de {
+  height: 120px;
+  display: block;
+  margin: auto;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.40);
+}
+
+.de1{
+  transform: rotate(10deg); /* Équivalent à rotateZ(45deg) */
+  }
+.de2{
+  transform: rotate(20deg); /* Équivalent à rotateZ(45deg) */
+   }
+
+
+   
+  .ombre:hover{
+    box-shadow: 10px 10px 5px 5px rgb(163, 162, 162);
+    border-style:double; 
+    cursor: pointer;
+   
+  }
+
+
+/* .compteur {
+  font-size: 13.5rem;
+  margin: 0;
+  min-width: 250px;
+  text-align: center;
+  /* Juste pour l'animation de limite atteinte 
+  position: relative;
+} */
+
+/* .limite-atteinte {
+  color: var(--rouge);
+  animation: limite-atteinte linear .2s 3;
+}
+
+@keyframes limite-atteinte {
+  from {
+    left: 0;
+  }
+  33% {
+    left: .05em;
+  }
+  66% {
+    left: -.05em;
+  }
+  to {
+    left: 0;
+  }
+} */
