@@ -8,6 +8,7 @@ const score2      = document.querySelector('#score-2')
 const select1     = document.querySelector('#select1');
 const select2     = document.querySelector('#select2');
 const enregistrer = document.querySelector('#enregistrer');
+const limiteFinal = document.querySelector('#scoreFinal');
  
 let player1, player2, puntos;
 
@@ -22,20 +23,20 @@ rejouer.addEventListener('click', ()=>{
 } )
 
 select1.addEventListener('click', ()=>{
-  select1.style.backgroundColor = "#f1a19e"; 
-  select2.style.backgroundColor = "white"; 
-  player1 = true;
-  player2 = false;
-  //points2.textContent = 0; 
+  selectOne();
+  // select1.style.backgroundColor = "#f1a19e"; 
+  // select2.style.backgroundColor = "white"; 
+  // player1 = true;
+  // player2 = false;
 
   
 })
 select2.addEventListener('click', ()=>{
-  select2.style.backgroundColor = "#f1a19e"; 
-  select1.style.backgroundColor = "white"; 
-  player2 = true;
-  player1 = false;
-  //points1.textContent = 0; 
+  selectTwo();
+  // select2.style.backgroundColor = "#f1a19e"; 
+  // select1.style.backgroundColor = "white"; 
+  // player2 = true;
+  // player1 = false;
 })
 
 enregistrer.addEventListener('click', ()=>{
@@ -47,8 +48,7 @@ enregistrer.addEventListener('click', ()=>{
     points2.textContent = 0;
 
   }
-  
-  
+    
 })
 
 function jeuDe () { 
@@ -65,13 +65,37 @@ function jeuDe () {
     puntos = rouler;     
     } else if (player1 === true && rouler === 1){
       points1.textContent = 0; 
+      //cambiar de jugador
     } else if (player2 === true && rouler === 1){
       points2.textContent = 0;
+     //cambiar de jugador
+
   }
 
 
 }
 
+function selectOne(){
+    select1.style.backgroundColor = "#f1a19e"; 
+    select2.style.backgroundColor = "white"; 
+    player1 = true;
+    player2 = false;
+  } 
+  
+function selectTwo(){
+    select2.style.backgroundColor = "#f1a19e"; 
+    select1.style.backgroundColor = "white"; 
+    player2 = true;
+    player1 = false;
+  }
+  
+
+// function limiteFinal(){
+//   limiteFinal.inputValue = 
+//   if(limiteFinal >= score1){
+
+//   }
+// }
   
 
  
