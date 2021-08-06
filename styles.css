@@ -5,7 +5,6 @@ body {
 }
 
 
-
 .box {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: 800px;
@@ -25,10 +24,10 @@ body {
 
 }
 
-
 .player-current-score {
   font-size: 40px;
 }
+
 .joueur-score {
   text-align: center;
   font-size: 80px;
@@ -41,28 +40,28 @@ body {
 }
 
 .de {
-  height: 120px;
+  height: 150px;
   display: block;
   margin: auto;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.40);
+  transform: rotate(20deg); 
+
 }
-
-.de1{
-  transform: rotate(10deg); /* Équivalent à rotateZ(45deg) */
-  }
-.de2{
-  transform: rotate(20deg); /* Équivalent à rotateZ(45deg) */
-   }
-
-
    
-  .ombre:hover{
-    box-shadow: 10px 10px 5px 5px rgb(163, 162, 162);
-    border-style:double; 
-    cursor: pointer;
+.ombre2:hover{
+  box-shadow: 8px 10px 5px 5px rgb(163, 162, 162);
+  border-style: solid; 
+  cursor: pointer;
+  border-color: #EB4D4D;
    
   }
-
+.ombre1:hover{
+  box-shadow: -8px 10px 5px 5px rgb(163, 162, 162);
+  border-style: solid; 
+  cursor: pointer;
+  border-color: #EB4D4D;
+    
+  }
 
 /* .compteur {
   font-size: 13.5rem;
