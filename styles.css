@@ -23,20 +23,26 @@ body {
 
 }
 
-.player-current-score {
-  font-size: 40px;
-}
+
 
 .joueur-score {
+  /* height: 300px;
+  width: 300px; */
   text-align: center;
   font-size: 80px;
   color: #EB4D4D;
   margin-bottom: 130px;
 }
 
-#scoreFinal{
-  width: 180px;
+#limiteFinal{
+  width: 150px;
+  padding-left: 15px;
+  
 }
+input:focus {
+  outline-width: 0;
+}
+
 
 .de {
   height: 150px;
