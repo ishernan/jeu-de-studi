@@ -90,6 +90,7 @@ function enregistrerPoints(){
     alert('Vous avez gagné la partie !'); 
     initialiser();
 
+
   } else if (pointsCumulés2 >= limiteFinal){
     alert('Vous avez gagné la partie !');
     initialiser();
