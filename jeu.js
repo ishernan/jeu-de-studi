@@ -12,19 +12,14 @@ const limite      = document.querySelector('#limiteFinal');
  
 let player1 = false;
 let player2 = false;
-let pointsCumulés = 0;
+let pointsCumulés1 = 0;
+let pointsCumulés2 = 0;
 let puntos, limiteFinal;
 
 roulezDes.addEventListener('click', jeuDe)
-
-rejouer.addEventListener('click', ()=>{
-  location.reload();
-  //de.style.display = 'none'; 
-} )
+rejouer.addEventListener('click', initialiser)
 select1.addEventListener('click', selectOne);
-
-select2.addEventListener('click', selectTwo); 
-
+select2.addEventListener('click', selectTwo);
 enregistrer.addEventListener('click', enregistrerPoints); 
 
 function jeuDe () { 
@@ -36,9 +31,11 @@ function jeuDe () {
   
   if(player1 === false && player2 === false){
     de.style.display = 'none'; 
-    return alert('Choisir un joueur !');  
+    return alert('Choisir un joueur !');      
+
   } 
   else if (limiteFinal <= 0){
+    de.style.display = 'none'; 
     return alert('vous devez préciser une limite valide'); 
   }  
   else if (player1 === true && rouler != 1) {
@@ -51,8 +48,8 @@ function jeuDe () {
     points1.textContent = 0; 
     selectTwo(); 
   } else if (player2 === true && rouler === 1){
-      points2.textContent = 0;
-      selectOne(); 
+    points2.textContent = 0;
+    selectOne(); 
   }
 
 }
@@ -62,8 +59,6 @@ function selectOne(){
     select2.style.backgroundColor = "white"; 
     player1 = true;
     player2 = false;
-
-    
   } 
   
 function selectTwo(){
@@ -75,22 +70,38 @@ function selectTwo(){
   
 function enregistrerPoints(){
   if(player1 === true){
-    pointsCumulés += puntos; 
-    score1.textContent = pointsCumulés; 
+    pointsCumulés1 += puntos; 
+    score1.textContent = pointsCumulés1; 
     points1.textContent = 0;
+    selectTwo();
+    de.style.display = 'none'; 
     
   } else if(player2 === true){
-    pointsCumulés += puntos; 
-    score2.textContent = pointsCumulés; 
+    pointsCumulés2 += puntos; 
+    score2.textContent = pointsCumulés2; 
     points2.textContent = 0;
+    selectOne(); 
+    de.style.display = 'none'; 
    
-  } 
-  // if(pointsCumulés >= limiteFinal){
-  //   //alert('ganamos'); 
-  //   let gagnant = document.getElementById('gagnant'); 
-  //   gagnant.classList.add('gagnant');
-  //  }
+  } else {
+    return alert ('Enregistrez une valeur valide'); 
+  }
+  if(pointsCumulés1 >= limiteFinal){
+    alert('Vous avez gagné la partie !'); 
+    initialiser();
 
+  } else if (pointsCumulés2 >= limiteFinal){
+    alert('Vous avez gagné la partie !');
+    initialiser();
+  }
 }
+function initialiser() { 
+  // select2.style.backgroundColor = "white"; 
+  // select1.style.backgroundColor = "white";
+  // score1.textContent = 0; 
+  // score2.textContent = 0; 
+  // limite.value = 0; 
+  return location.reload();
+ }
  
  
