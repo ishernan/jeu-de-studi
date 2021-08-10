@@ -68,21 +68,13 @@ input:focus {
     
   }
 
-/* .compteur {
-  font-size: 13.5rem;
-  margin: 0;
-  min-width: 250px;
-  text-align: center;
-  /* Juste pour l'animation de limite atteinte 
-  position: relative;
-} */
 
-/* .limite-atteinte {
+.gagnant {
   color: var(--rouge);
   animation: limite-atteinte linear .2s 3;
 }
 
-@keyframes limite-atteinte {
+@keyframes gagnant {
   from {
     left: 0;
   }
@@ -95,4 +87,4 @@ input:focus {
   to {
     left: 0;
   }
-} */
+}

@@ -11,8 +11,9 @@ const enregistrer = document.querySelector('#enregistrer');
 const limite      = document.querySelector('#limiteFinal');
  
 let player1 = false;
-let player2 = false; 
-let puntos, limiteFinal, pointsCumulés1, pointsCumulés2;
+let player2 = false;
+let pointsCumulés = 0;
+let puntos, limiteFinal;
 
 roulezDes.addEventListener('click', jeuDe)
 
@@ -21,7 +22,9 @@ rejouer.addEventListener('click', ()=>{
   //de.style.display = 'none'; 
 } )
 select1.addEventListener('click', selectOne);
+
 select2.addEventListener('click', selectTwo); 
+
 enregistrer.addEventListener('click', enregistrerPoints); 
 
 function jeuDe () { 
@@ -39,7 +42,6 @@ function jeuDe () {
     return alert('vous devez préciser une limite valide'); 
   }  
   else if (player1 === true && rouler != 1) {
-
     points1.textContent = rouler; 
     puntos = rouler;     
   } else if(player2===true && rouler != 1){
@@ -60,6 +62,8 @@ function selectOne(){
     select2.style.backgroundColor = "white"; 
     player1 = true;
     player2 = false;
+
+    
   } 
   
 function selectTwo(){
@@ -71,21 +75,22 @@ function selectTwo(){
   
 function enregistrerPoints(){
   if(player1 === true){
-    pointsCumulés1 =  puntos;  
-    score1.textContent = pointsCumulés1; 
+    pointsCumulés += puntos; 
+    score1.textContent = pointsCumulés; 
     points1.textContent = 0;
     
   } else if(player2 === true){
-    score2.textContent = puntos; 
+    pointsCumulés += puntos; 
+    score2.textContent = pointsCumulés; 
     points2.textContent = 0;
+   
+  } 
+  // if(pointsCumulés >= limiteFinal){
+  //   //alert('ganamos'); 
+  //   let gagnant = document.getElementById('gagnant'); 
+  //   gagnant.classList.add('gagnant');
+  //  }
 
-
-    console.log(limiteFinal)
-
-  } else if(score1 >= limiteFinal){
-    return alert("vous avez gagné");
-   }
-  
 }
  
  
