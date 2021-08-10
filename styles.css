@@ -69,22 +69,3 @@ input:focus {
   }
 
 
-.gagnant {
-  color: var(--rouge);
-  animation: limite-atteinte linear .2s 3;
-}
-
-@keyframes gagnant {
-  from {
-    left: 0;
-  }
-  33% {
-    left: .05em;
-  }
-  66% {
-    left: -.05em;
-  }
-  to {
-    left: 0;
-  }
-}
